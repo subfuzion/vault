@@ -1,6 +1,6 @@
 {
-  "name": "vault",
-  "version": "1.0.0",
+  "name": "vault-tool",
+  "version": "0.0.1",
   "description": "Simple utility to encrypt, store, retrieve and decrypt text",
   "main": "main.js",
   "scripts": {
