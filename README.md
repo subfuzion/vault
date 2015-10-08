@@ -51,21 +51,21 @@ API
 
     var vault = require('vault-tool');
     
+    
     vault.put(key, plainText, function(err) {
-    }
+    });
     
     vault.get(key, function(err, plainText) {
-    }
+    });
     
-    vault.remove(key) {
-    }
+    vault.remove(key, function(err) {
+    });
+    
     
     // utility methods
     
-    vault.encrypt(key, plainText, function(err, cipherText) {
-    };
+    var cipherText = vault.encrypt(key, plainText, function(err, cipherText);
     
-    vault.decrypt(key, cipherText, function(err, plainText) {
-    };
+    var plainText = vault.decrypt(key, cipherText, function(err, plainText);
 
 
