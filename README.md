@@ -4,16 +4,18 @@ vault
 [![NPM](https://nodei.co/npm/vault-tool.png?mini=true)](https://nodei.co/npm/vault-tool/)
 
 Module and command line interface (cli) for encrypting, storing retrieving, and decrypting text.
-Encrypted text entries are retrieved by keys (names) in a JSON file stored in your home directory.
+Encrypted text entries are retrieved by keys (names) in a JSON file stored in your home directory
+(`~/.vault.json`).
 
     npm install -g vault-tool
-    vault --help
     
     export VAULT_PASS=secret
     
     vault set <key> <text>
     vault get <key>
     vault remove <key>
+    
+    vault --help
 
 or add to your own package
 
