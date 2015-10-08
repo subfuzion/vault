@@ -2,7 +2,7 @@
 
 var cli = require('commander');
 var pkg = require('../package.json');
-var vault = require('../main');
+var vault = require('../lib/vault');
 
 if (!process.env.VAULT_PASS) {
   console.error('Vault environment not set: missing VAULT_PASS');
