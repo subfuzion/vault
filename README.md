@@ -1,12 +1,12 @@
 vault
 =====
 
-[![NPM](https://nodei.co/npm/vault-tool.png)](https://nodei.co/npm/vault-tool/)
+[![NPM](https://nodei.co/npm/vault-tool.png?mini=true)](https://nodei.co/npm/vault-tool/)
 
 Module and command line interface (cli) for encrypting, storing retrieving, and decrypting text.
 Encrypted text entries are retrieved by keys (names) in a JSON file stored in your home directory.
 
-    npm install -g vault
+    npm install -g vault-tool
     vault --help
     
     export VAULT_PASS=secret
@@ -17,7 +17,7 @@ Encrypted text entries are retrieved by keys (names) in a JSON file stored in yo
 
 or add to your own package
 
-    npm install --save vault
+    npm install --save vault-tool
 
 and add a run script to your `package.json` file to access the cli:
 
@@ -49,7 +49,7 @@ the password directly on the command line, like this:
 API
 ---
 
-    var vault = require('vault');
+    var vault = require('vault-tool');
     
     vault.put(key, plainText, function(err) {
     }
