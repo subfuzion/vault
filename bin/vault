@@ -1,0 +1,37 @@
+#! /usr/bin/env node
+
+var cli = require('commander');
+var pkg = require('../package.json');
+var vault = require('../main');
+
+if (!process.env.VAULT_PASS) {
+  console.error('Vault environment not set: missing VAULT_PASS');
+  process.exit(1);
+}
+
+cli
+  .version(pkg.version)
+  .usage('set <key> <text-to-encrypt>');
+
+cli
+  .command('set <key> <text>')
+  .description('Encrypt the text and store it under the key in the vault')
+  .action(function(key, text) {
+    vault.put(key, text, function(err) {
+      if (err) console.error(err.message);
+    });
+  });
+
+cli
+  .command('get <key>')
+  .description('Get the unencrypted text stored under the key in the vault')
+  .action(function(key) {
+    vault.get(key, function(err, plainText) {
+      if (err) return console.error(err.message);
+      console.log(plainText);
+    });
+  });
+
+cli.parse(process.argv);
+
+
