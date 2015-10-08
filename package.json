@@ -7,7 +7,7 @@
     "start": "./bin/vault",
     "test": "mocha"
   },
-  "bin": "./bin/vault",
+  "bin": { "vault": "./bin/vault" },
   "license": "ISC",
   "devDependencies": {
     "mocha": "^2.3.3"
